@@ -17,7 +17,7 @@ const ApiSelector = ({ selectedApi, setSelectedApi }) => {
             name="radio" 
             onChange={(e) => setSelectedApi(e.target.value)} // ✅ Radio button change handle
           />
-         Chat On
+         Chat Now
         </label>
       </div>
       {/* <div>
