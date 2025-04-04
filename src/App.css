@@ -176,7 +176,7 @@ button {
   bottom: 80px;
   right: 20px;
   width: 400px;
-  height: 300px;
+  height: 250px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -207,7 +207,12 @@ button {
   font-size: 14px;
   transition: all 0.3s ease;
   width: auto;
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  width: 87%;
+  margin: 0 auto;
+  bottom: 18px;
+
 }
 
 /* ✅ Active Tab Design */
