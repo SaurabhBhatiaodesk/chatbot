@@ -5,7 +5,7 @@ const ApiSelector = ({ selectedApi, setSelectedApi }) => {
     <div className="main__popup">
       <div className="header">
         <h2>Chat with us</h2>
-        <p>👋 Hi, message us with any questions. We're happy to help!</p>
+       <p className="text-short">👋 Hi, message us with any questions. We're happy to help!</p>
       </div>
     <div className="api-selector">
 
