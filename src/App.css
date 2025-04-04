@@ -36,9 +36,11 @@
     transform: rotate(360deg);
   }
 }
-
+.text-short{
+  font-size: 14px;
+}
 .header {
-  background: #000;
+  background: #835ba8;
   color: #fff;
   padding: 15px;
 }
@@ -129,6 +131,9 @@
   font-size: 14px;
   font-family: 'Inter';
 }
+.input__chat:hover { 
+  border: 1px solid #835ba8;
+}
 
 /* Send button */
 button {
@@ -154,7 +159,7 @@ button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #000;
+  background-color: #835ba8;
   color: white;
   width: 50px;
   height: 50px;
@@ -229,12 +234,12 @@ button {
 
 /* ✅ On Hover Effect */
 .api-selector label:hover {
-  background: #000;
+  background: #835ba8;
   color: #fff;
 }
 
 .chatbot_header{
-  background: #000;
+  background: #835ba8;
   position: relative;
   padding: 20px;
 }
