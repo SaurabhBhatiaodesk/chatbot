@@ -20,7 +20,7 @@ const App = () => {
         payload = {
           query: query,
         };
-        apiUrl = "http://3.109.22.239:7000/api/v1/query";
+        apiUrl = "https://chatbot.base2brand.com/api/v1/query";
       } else if (selectedApi === "other") {
         payload = {
           query: query,
