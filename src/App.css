@@ -80,6 +80,7 @@
   padding: 30px;
   background-color: #f1f1f1;
   overflow: auto;
+  position: relative;
 }
 
 /* Style for messages */
@@ -181,7 +182,7 @@ button {
   bottom: 80px;
   right: 20px;
   width: 400px;
-  height: 250px;
+  height: 200px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -267,7 +268,10 @@ button {
   margin-left: auto;
   max-width: 60%;
 }
-
+button.copy_icon {
+  right: -32px;
+  top: 0px;
+}
 .bot {
   background-color: #e3e3e3;
   color: #333;
@@ -279,6 +283,7 @@ button {
   width: fit-content;
   margin-right: auto;
   max-width: 60%;
+  position: relative;
 }
 
 /* typing css */
