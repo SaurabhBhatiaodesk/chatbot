@@ -141,7 +141,8 @@ const Chatbot = ({ query, setQuery, response, handleSearch, goBack }) => {
     {/* ⭐⭐ Important Part: Split and render properly ⭐⭐ */}
     {msg.type === "answer"
   ? msg.text
-      .split(/(?<!\*)\*(?!\*)/) // Split only on single asterisk, ignore double
+      .replace(/\*/g, '') // ✅ Remove all asterisks
+      .split('\n')         // Split by line if needed (optional)
       .map((line, idx) =>
         line.trim() ? (
           <div key={idx}>
@@ -151,6 +152,7 @@ const Chatbot = ({ query, setQuery, response, handleSearch, goBack }) => {
         ) : null
       )
   : msg.text}
+
 
   </div>
 ))}
