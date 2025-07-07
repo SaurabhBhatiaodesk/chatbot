@@ -13,30 +13,36 @@ const App = () => {
  
  
   const handleSearch = async () => {
-    console.log("testindfen");
     try {
       let payload;
       let apiUrl;
- 
       if (selectedApi === "query" || selectedApi === "other") {
         payload = {
-          user_query: query, // ✅ set query as user_query
-          session_id: "test-session-001", // ✅ added session_id
+          question: query, // ✅ using 'question' as in Postman
+          user_id: "test-session-001", // ✅ same key as Postman
         };
-        apiUrl = "https://chatbot.base2brand.com/rag-qa"; // ✅ updated API URL
+        apiUrl = "https://chatbot.base2brand.com/ask"; // ✅ API URL
       } else {
         return "Please select an API.";
       }
+  
       console.log("payloadpayloadpayload>>", payload, apiUrl);
-      const res = await axios.post(apiUrl, payload);
+  
+      const res = await axios.post(apiUrl, payload, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Basic YWRtaW46bUdWcSBFeG9UIGZJdWsgRGF3ayB0VW5hIG9YaDg=", // ✅ added Basic Auth header
+        },
+      });
+  
       const apiResponse =
-        res.data.answer || res.data.summary || "No response from the API.";
- 
-      setResponse(apiResponse);
+        res.data.answer || res.data.summary || res.data || "No response from the API.";
+  
+      setResponse(typeof apiResponse === "string" ? apiResponse : JSON.stringify(apiResponse));
       console.log("resres", res);
       return apiResponse;
     } catch (error) {
-      console.error("API Error:::", error);
+      console.error("API Error:::", error.response ? error.response.data : error);
       setResponse("Error fetching data");
       return "Error fetching data";
     }
